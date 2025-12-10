@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 @dataclass
 class SolverParameters:
-    alpha: float #wspolczynnik kroku gradientu
+    alpha: float #wspołczynnik kroku gradientu
     max_iter: int = 150 #maksymalna liczba iteracji
     tol_grad: float = 0.000001 #tolerancja dla normy gradientu (stop, jeśli gradient jest bardzo mały)
     tol_step: float = 0.000001 #tolerancja dla zmiany x między iteracjami (stop, jeśli zmiana jest minimalna)
@@ -45,7 +45,7 @@ def solver(eval_func, x0, params: SolverParameters):
 
         x = x_new #przypisanie x_new do x i kontynuacja kolejnej iteracji jeśli warunki stopu nie zostały spełnione
 
-    return SolverResult(x=x, values=values, steps=t + 1) #zrócenie obiektu SolverResult z ostatnim punktem, wartościami funkcji i liczbą wykonanych iteracji
+    return SolverResult(x=x, values=values, steps=t + 1) #zwrócenie obiektu SolverResult z ostatnim punktem, wartościami funkcji i liczbą wykonanych iteracji
 
 def quadratic(x):
     return 0.5 * np.sum(x**2)
