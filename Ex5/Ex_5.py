@@ -104,7 +104,7 @@ def train_gradient(model, X, y, epochs=3000, lr=0.01):
     return model
 
 #metoda ewolucyjna (random search), optymalizacja parametrów sieci metodą losowego przeszukiwania
-def evolutionary_search(base_model, X, y, candidates=1000, sigma=0.5):
+def evolutionary_search(base_model, X, y, candidates=30000, sigma=3):
     #bazowy wektor parametrów
     base_vec = base_model.params_to_vector()
 
